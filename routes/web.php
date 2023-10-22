@@ -55,15 +55,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
-Route::get("/mails/demo", function () {
-    return new App\Mail\Demo();
-});
-
-Route::get("/mails/new-contact-received", function () {
-    return new App\Mail\NewContactReceived([
-        "name" => "Mario Rossi",
-        "email" => "mario.rossi@gmail.com",
-        "message" => "lorem ipsum dolor sit amet"
-    ]);
-});

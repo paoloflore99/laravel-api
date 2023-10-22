@@ -42,24 +42,4 @@ class User extends Authenticatable implements MustVerifyEmail {
         'password' => 'hashed',
     ];
 
-    /**
-     * Get the posts for the user.
-     */
-    public function posts() {
-        return $this->hasMany(Post::class);
-    }
-
-    /**
-     * Get the user detail associated with the user.
-     */
-    public function userDetail() {
-        return $this->hasOne(UserDetail::class);
-    }
-
-    /**
-     * Get the roles for the user.
-     */
-    public function role() {
-        return $this->belongsTo(Role::class);
-    }
 }
