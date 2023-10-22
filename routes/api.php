@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::get("posts", [PostController::class, "index"]);
 Route::get("posts/{slug}", [PostController::class, "show"]);
 
 Route::post("contacts", [ContactController::class, "store"]);
+
+Route::get('/projects', [ProjectController::class, 'getProjects']);
